@@ -1,0 +1,41 @@
+@import "normalize";
+@import "variables";
+@import "mixins";
+@include fontFace;
+
+* {
+  font-family: 'Roboto-Regular', sans-serif;
+}
+.w-100 {
+  width: 100%;
+}
+.d-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.text-primary {
+  color: $color-secondary;
+}
+.text-secondary {
+  color: $color-neutral-light;
+}
+.text-small {
+  font-size: 47px;
+}
+.text-medium {
+  font-size: 82px;
+}
+.text-large {
+  font-size: 99px;
+}
+.text-extra-large {
+  font-size: 240px;
+}
