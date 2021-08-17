@@ -1,0 +1,22 @@
+@import "../../styles/css/mixins";
+
+.header-container {
+  width: 100%;
+  height: 50%;
+  padding: 0 146px;
+  display: flex;
+  justify-content: space-between;
+  .header-icon {
+    width: 328px;
+    height: 328px;
+  }
+  .header-temp-container {
+    width: 448px;
+    margin: 0 142px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header-date-container {
+    flex: 1;
+  }
+}
