@@ -9,6 +9,10 @@
   .header-icon {
     width: 328px;
     height: 328px;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
   .header-temp-container {
     width: 448px;
