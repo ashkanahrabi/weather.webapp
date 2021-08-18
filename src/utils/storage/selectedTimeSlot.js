@@ -1,6 +1,8 @@
-import React, {useState, createContext} from "react";
+import React, {useState, createContext, useContext} from "react";
 
-export const SelectedTimeSlotContext = createContext(null);
+const SelectedTimeSlotContext = createContext([]);
+
+export const useSelectedTimeContext = () => useContext(SelectedTimeSlotContext);
 
 const SelectedTimeSlot = ({children}) => {
     const [selectedTimeSlot, setSelectedTimeSlot] = useState();
