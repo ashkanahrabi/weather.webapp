@@ -4,9 +4,9 @@ import CardItem from "../cardItem/CardItem";
 
 const CardSlider = ({cardItem}) => {
     return (
-        <div className={`card-slider-container`}>
+        <div className={`card-slider-container`} data-testid={'card-slider-container'}>
             {
-                cardItem.map((item) => <CardItem data={item} key={item.dt}/>)
+                cardItem?.map((item) => <CardItem data={item} key={item.dt}/>)
             }
         </div>
     );
