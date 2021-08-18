@@ -1,1 +1,1 @@
-export const toCelsius = value => Math.floor(value - 273.5);
+export const toCelsius = value => typeof value == "number" ? Math.floor(value - 273.5) : '-';
