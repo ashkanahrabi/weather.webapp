@@ -1,12 +1,12 @@
-import React, {Fragment, useContext, useEffect} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import './home.scss';
 import Header from "../../components/header/Header";
 import CardSlider from "../../components/cardSlider/CardSlider";
 import {useDataFetch} from "../../utils/customHooks/useDataFetch";
-import {SelectedTimeSlotContext} from "../../utils/storage/selectedTimeSlot";
+import {useSelectedTimeContext} from "../../utils/storage/selectedTimeSlot";
 
 const Home = () => {
-    const [selectedTime, setSelectedTime] = useContext(SelectedTimeSlotContext);
+    const [selectedTime, setSelectedTime] = useSelectedTimeContext();
     const apiParams = {
         method: 'GET',
         url: '/api'
@@ -25,10 +25,10 @@ const Home = () => {
         }
     }, [apiResponse, setSelectedTime]);
     return (
-        <div className={`home-container`}>
+        <div className={`home-container`} data-testid={'home-container'}>
             {
                 apiResponse.isLoading ?
-                    <div className="w-100 h-100 d-flex justify-content-center align-items-center text-primary text-large">Loading...</div> :
+                    <div className="w-100 h-100 d-flex justify-content-center align-items-center text-primary text-large" data-testid={'loading-element'}>Loading...</div> :
                     apiResponse.data ?
                         <Fragment>
                             <Header city={apiResponse.data.city}/>
