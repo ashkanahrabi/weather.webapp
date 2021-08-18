@@ -1,4 +1,1 @@
-const toCelcius = (value) => {
-    return value - 273.15;
-}
-Number.prototype.toCelcius = function (){}
+export const toCelsius = value => Math.floor(value - 273.5);
