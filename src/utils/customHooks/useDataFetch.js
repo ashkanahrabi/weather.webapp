@@ -7,8 +7,7 @@ const dataFetchReducer = (state, action) => {
             return {
                 ...state,
                 isLoading: true,
-                isError: false,
-                id: action.id
+                isError: false
             };
         case 'FETCH_SUCCESS':
             return {
@@ -28,7 +27,6 @@ const dataFetchReducer = (state, action) => {
             throw new Error();
     }
 };
-const baseApiEndpoint = process.env.REACT_APP_API_ENDPOINT;
 
 export const useDataFetch = (initialParams) => {
     const [params, setParams] = useState(initialParams); // {method, url, data}
@@ -40,8 +38,8 @@ export const useDataFetch = (initialParams) => {
     useEffect(() => {
         if(params){
             const fetchData = async () => {
-                dispatch({ type: 'FETCH_INIT', id: params.id });
-                await axios[params.method.toLowerCase()](baseApiEndpoint + params.url, params.data)
+                dispatch({ type: 'FETCH_INIT'});
+                await axios[params.method.toLowerCase()](params.url, params.data)
                     .then(result => {
                         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
                     })
