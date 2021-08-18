@@ -2,11 +2,12 @@ import React from 'react';
 import './cardSlider.scss';
 import CardItem from "../cardItem/CardItem";
 
-const CardSlider = () => {
+const CardSlider = ({cardItem}) => {
     return (
         <div className={`card-slider-container`}>
-            <CardItem />
-
+            {
+                cardItem.map((item) => <CardItem data={item} key={item.dt}/>)
+            }
         </div>
     );
 };
