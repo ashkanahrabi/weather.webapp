@@ -1,5 +1,6 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
+//this is the proxy module which proxies requests from /api to the openWeatherMap origin
 module.exports = function(app) {
     const baseApiEndpoint = process.env.REACT_APP_API_ENDPOINT;
     const apiKey = `&appid=${process.env.REACT_APP_API_KEY}`;

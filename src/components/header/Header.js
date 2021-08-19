@@ -6,6 +6,8 @@ import WeatherIcon from "../weatherIcon/WeatherIcon";
 
 const Header = ({city}) => {
     const [selectedTime] = useSelectedTimeContext();
+
+    //TODO: Refactor - write a module to handle date and time formats
     const weekday = new Date(selectedTime?.dt * 1000).toLocaleDateString('default', {weekday: 'long'});
     const dayOfMonth = new Date(selectedTime?.dt * 1000).toLocaleDateString('default', {day: '2-digit'});
     const month = new Date(selectedTime?.dt * 1000).toLocaleDateString('default', {month: 'long'});

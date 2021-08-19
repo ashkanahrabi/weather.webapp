@@ -10,6 +10,7 @@ const CardItem = ({data}) => {
         hour: '2-digit',
         minute:'2-digit'
     };
+    //TODO: Refactor - write a module to handle date and time formats
     const time = new Date(data?.dt * 1000).toLocaleTimeString('en-GB', localeOptions);
     const temp = toCelsius(data?.main.temp);
     return (
