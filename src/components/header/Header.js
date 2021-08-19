@@ -21,10 +21,12 @@ const Header = ({city}) => {
                 </div>
                 <div className={`text-primary text-extra-large`}>{toCelsius(selectedTime?.main.temp)}</div>
             </div>
-            <div className={`header-date-container`}>
+            <div>
                 <div className="text-secondary text-small">{city?.name}</div>
-                <div className="text-primary text-medium">{weekday}</div>
-                <div className="text-primary text-medium">{`${dayOfMonth}. ${month}`}</div>
+                <div className="py-3">
+                    <div className="text-primary text-medium">{weekday}</div>
+                    <div className="text-primary text-medium">{`${dayOfMonth}. ${month}`}</div>
+                </div>
             </div>
         </div>
     );
