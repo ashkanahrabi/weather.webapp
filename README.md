@@ -16,7 +16,7 @@ It is developed with React.Js (using [create-react-app](https://create-react-app
 
 *Please create a `.env` file in the root of the project and add two environment variables mentioned above with their values*
 
-#### How to run
+#### How to run the project
 Make sure you added the `.env` file with proper key values.
 After that with `node` and `npm` installed, run below commands in the following order:
 
@@ -33,9 +33,15 @@ After that with `node` and `npm` installed, run below commands in the following 
 `http://localhost:3000`
 
 
-To Build the app run:
+To Build the app, run:
 
 `npm run build`
 
 
-## 
+## Testing
+
+The app uses [react-testing-library](https://testing-library.com/) and [jest](https://jestjs.io/) packages to run tests.
+
+You can run the following command to run the tests with a coverage table:
+
+`npm run test`
