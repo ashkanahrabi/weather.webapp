@@ -13,8 +13,10 @@ It is developed with React.Js (using [create-react-app](https://create-react-app
 ###### You need to add 2 environment variables in order to run this application:
 - REACT_APP_API_ENDPOINT: Which is the URL of a weather web service (check .env.example for the sample endpoint)
 - REACT_APP_API_KEY: Which is the app id of OpenWeatherMap service
+  
+*(check the OpenWeatherMap dashboard for you private app id or simply use the one provided in .env.example which is the sample app id provided by OpenWeatherMap)*
 
-*Please create a `.env` file in the root of the project and add two environment variables mentioned above with their values*
+***Please create a `.env` file in the root of the project and add two environment variables mentioned above with their values***
 
 #### How to run the project
 Make sure you added the `.env` file with proper key values.
