@@ -21,7 +21,7 @@ test('Renders <CardItem />', () => {
 
 test('toCelsius method works properly', () => {
     render(<CardItem data={mockItem}/>);
-    expect(screen.getByTestId('celsius-temp').innerHTML).toEqual('-4');
+    expect(screen.getByTestId('celsius-temp').innerHTML).toEqual('-4\u00b0');
 });
 
 test('time format is correct', () => {
